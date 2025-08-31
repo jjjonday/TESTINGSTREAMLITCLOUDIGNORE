@@ -74,6 +74,7 @@ So far, from what I can tell, Streamlit Cloud supports:
      i think if each member has ownership of around 4-5 dashboards, and we collate links to each - the storage is practically infinite so we can get lazy with 
      data mgmt (and can always create new github accounts)
 
+2. mobile viewing (quite seamlessly, could be useful if checking stuff on the go/away from PC)
 
 DOES NOT support: 
 1. constant hosting/regular data updates. so for the email automation stuff, need to find another solution (AWS for sending emails to 40 members weekly probably costs less than a dollar a month, main costs are usually hosting (free, streamlit community))
