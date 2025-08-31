@@ -70,17 +70,17 @@ Ignore the template dashboard below (its from streamlit), this is just a test to
 
 So far, from what I can tell, Streamlit Cloud supports: 
 1. API calls, but only On-demand (when you open the app)
-     - Can cache data and upsert new/delete old daily i think, with a 50 GB limit
-     i think if each member has ownership of around 4-5 dashboards, and we collate links to each the storage is practically infinite so we can get lazy with 
-     data mgmt and can always create new github accounts
+     - Can cache data and upsert new/delete old daily i think, with a 50 GB limit.
+     i think if each member has ownership of around 4-5 dashboards, and we collate links to each - the storage is practically infinite so we can get lazy with 
+     data mgmt (and can always create new github accounts)
 
 
 DOES NOT support: 
-1. constant hosting/regular data updates. so for the VAR flagging, email automation stuff, need to find another solution 
-2. Private apps. so sensitive dashboards that pull from our IBKR port probably cannot host here
+1. constant hosting/regular data updates. so for the email automation stuff, need to find another solution (AWS for sending emails to 40 members weekly probably costs less than a dollar a month, main costs are usually hosting (free, streamlit community))
+2. Private apps. so sensitive dashboards that pull from our IBKR port probably cannot host here (maybe host on AWS for about $3/month if on-demand, and about $20/month if you want constant alert and update capability for risk)
 
 Yet to test: 
-1. can i run interactive functions that are more complex than data filters, sliders (Very probably can, this is relating to the iv/rv/garch dahsboard)
+1. can i run interactive functions that are more complex than data filters, sliders (Very probably can, this is relating to the iv/rv/garch tool)
 2. for slightly larger datasets, and with heavier calculations, I would not want to have the user wait 20s to 30s (RAM alloc is not huge).
 If data only needs to be updated daily (or some other reasonable interval), then it might make more sense to cache with st.cache_data (data) and st.cache_resource (not sure, but probably not relevant)
 '''
