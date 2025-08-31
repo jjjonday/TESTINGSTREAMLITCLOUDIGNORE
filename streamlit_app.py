@@ -68,7 +68,7 @@ gdp_df = get_gdp_data()
 
 Ignore the template dashboard below (its from streamlit), this is just a test to see how streamlit cloud works. 
 
-So far, from what I can tell, Streamlit Cloud supprots: 
+So far, from what I can tell, Streamlit Cloud supports: 
 1. API calls, but only On-demand (when you open the app)
      - Can cache data and upsert new/delete old daily i think, with a 50 GB limit
      i think if each member has ownership of around 4-5 dashboards, and we collate links to each the storage is practically infinite so we can get lazy with 
