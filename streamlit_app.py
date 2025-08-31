@@ -77,7 +77,7 @@ So far, from what I can tell, Streamlit Cloud supports:
 
 DOES NOT support: 
 1. constant hosting/regular data updates. so for the email automation stuff, need to find another solution (AWS for sending emails to 40 members weekly probably costs less than a dollar a month, main costs are usually hosting (free, streamlit community))
-2. Private apps. so sensitive dashboards that pull from our IBKR port probably cannot host here (maybe host on AWS for about $3/month if on-demand, and about $20/month if you want constant alert and update capability for risk)
+2. Private apps. so sensitive dashboards that pull from our IBKR port probably cannot host here (maybe host on AWS for about usd3/month if on-demand, and about usd20/month if you want constant alert and update capability for risk)
 
 Yet to test: 
 1. can i run interactive functions that are more complex than data filters, sliders (Very probably can, this is relating to the iv/rv/garch tool)
