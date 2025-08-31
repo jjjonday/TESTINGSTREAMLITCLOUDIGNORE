@@ -64,11 +64,25 @@ gdp_df = get_gdp_data()
 
 # Set the title that appears at the top of the page.
 '''
-# :earth_americas: GDP dashboard
+# :earth_americas: Hello NUSSIF Systematic
 
-Browse GDP data from the [World Bank Open Data](https://data.worldbank.org/) website. As you'll
-notice, the data only goes to 2022 right now, and datapoints for certain years are often missing.
-But it's otherwise a great (and did I mention _free_?) source of data.
+Ignore the template dashboard below (its from streamlit), this is just a test to see how streamlit cloud works. 
+
+So far, from what I can tell, Streamlit Cloud supprots: 
+1. API calls, but only On-demand (when you open the app)
+     - Can cache data and upsert new/delete old daily i think, with a 50 GB limit
+     i think if each member has ownership of around 4-5 dashboards, and we collate links to each the storage is practically infinite so we can get lazy with 
+     data mgmt and can always create new github accounts
+
+
+DOES NOT support: 
+1. constant hosting/regular data updates. so for the VAR flagging, email automation stuff, need to find another solution 
+2. Private apps. so sensitive dashboards that pull from our IBKR port probably cannot host here
+
+Yet to test: 
+1. can i run interactive functions that are more complex than data filters, sliders (Very probably can, this is relating to the iv/rv/garch dahsboard)
+2. for slightly larger datasets, and with heavier calculations, I would not want to have the user wait 20s to 30s (RAM alloc is not huge).
+If data only needs to be updated daily (or some other reasonable interval), then it might make more sense to cache with st.cache_data (data) and st.cache_resource (not sure, but probably not relevant)
 '''
 
 # Add some spacing
